@@ -4,6 +4,7 @@ const WebSocket = require('ws');
 
 const app = express();
 app.use(express.json());
+app.use(express.static(__dirname));
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
